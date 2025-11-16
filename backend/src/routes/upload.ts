@@ -61,16 +61,19 @@ router.post(
   "/upload",
   upload.single("image"),
   async (req: Request, res: Response): Promise<void> => {
+    // TypeScript cast to add .file property to Request
+    const file = (req as Request & { file?: Express.Multer.File }).file;
+
     try {
-      if (!req.file) {
+      if (!file) {
         res.status(400).json({ error: "No image file provided" });
         return;
       }
 
-      console.log("📤 Uploading file:", req.file.originalname);
-      console.log("📦 File size:", req.file.size, "bytes");
+      console.log("📤 Uploading file:", file.originalname);
+      console.log("📦 File size:", file.size, "bytes");
 
-      const result = await uploadToCloudinary(req.file.buffer);
+      const result = await uploadToCloudinary(file.buffer);
 
       console.log("✅ Upload successful:", result.secure_url);
 
