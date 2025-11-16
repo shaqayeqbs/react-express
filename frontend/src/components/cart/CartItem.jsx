@@ -53,7 +53,7 @@ export default function CartItem({ item }) {
             <div>
               <Link
                 to={`/products/${item.id}`}
-                className="text-lg font-semibold text-gray-800 hover:text-blue-600"
+                className="lg:text-lg font-semibold text-gray-800 hover:text-blue-600"
               >
                 {item.name}
               </Link>
@@ -81,9 +81,9 @@ export default function CartItem({ item }) {
           </div>
 
           {/* Price and Quantity Controls */}
-          <div className="flex items-center justify-between mt-4">
+          <div className="lg:flex lg:items-center  justify-between mt-4">
             {/* Quantity Controls */}
-            <div className="flex items-center border border-gray-300 rounded-lg">
+            <div className="flex w-fit items-center border border-gray-300 rounded-lg">
               <button
                 onClick={() => handleQuantityChange(item.quantity - 1)}
                 className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition-colors"
@@ -110,8 +110,8 @@ export default function CartItem({ item }) {
             </div>
 
             {/* Price */}
-            <div className="text-right">
-              <div className="text-xl font-bold text-primary">
+            <div className="mt-4 lg:mt-0 lg:text-right">
+              <div className="lg:text-xl font-bold text-primary">
                 ${(item.price * item.quantity).toFixed(2)}
               </div>
               <div className="text-sm text-gray-500">

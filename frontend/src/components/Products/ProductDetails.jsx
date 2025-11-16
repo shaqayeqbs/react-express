@@ -123,7 +123,7 @@ export default function ProductDetail() {
   if (!selectedProduct) return <ErrorMessage message="Product not found" />;
 
   return (
-    <div className="container items-center h-screen mx-auto px-4 py-8">
+    <div className="container items-center h-full mx-auto px-4 py-8">
       <Link
         to="/"
         className="inline-block mb-6 text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"

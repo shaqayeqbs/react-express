@@ -6,7 +6,7 @@ import useProductStore from "../../store/useProductStore";
 import Button from "../common/Button";
 
 export default function ProductCard({ product }) {
-  const addToCart = useCartStore((state) => state.addItem);
+  const { addToCart } = useCartStore();
   const { deleteProduct } = useProductStore();
   const [isDeleting, setIsDeleting] = useState(false);
 
