@@ -1,0 +1,3 @@
+I built this app using a component-based approach with **React** and **Zustand** for state management. The layout relies on **CSS Grid** for the product gallery and **Flexbox** for navigation, with a sticky header that keeps key features always accessible. The product grid smoothly transitions from single-column on mobile to 4 columns on desktop.
+
+For responsiveness, I followed a mobile-first strategy using **Tailwind CSS v4** breakpoints. Every element is optimized for touch on smaller screens, with properly sized buttons and readable text that doesn't require zooming. The **React Router** handles smooth navigation, while **Axios** manages API calls, and **Vite** powers the fast development experience.

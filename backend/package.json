@@ -1,0 +1,47 @@
+{
+  "name": "product-api",
+  "version": "1.0.0",
+  "description": "Product API with Node.js, TypeScript, and Prisma",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:generate": "npx prisma generate",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "prisma:studio": "npx prisma studio",
+    "postinstall": "prisma generate"
+  },
+  "keywords": [
+    "api",
+    "products",
+    "prisma",
+    "typescript"
+  ],
+  "author": "Shaq",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "cloudinary": "^2.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "form-data": "^4.0.4",
+    "multer": "^2.0.2",
+    "prisma": "^6.19.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/multer": "^2.0.0",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2"
+  }
+}
